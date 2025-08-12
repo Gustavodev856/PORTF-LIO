@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to right, #000000, #8c8888);
+  font-family: sans-serif;
+}
+
+.info-completo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 20px 0;
+  
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+}
+
+.title h1 {
+  font-size: 28px;
+}
+
+
+/* Menu botão no canto esquerdo */
+.menu-container {
+  position: absolute;
+  display: block;
+  left: 10px;
+  top: 50%;
+  padding: 10px;
+  transform: translateY(-50%);
+}
+
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Link animação */
+
+.link-animado {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-animado::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0%;
+  background-color: #4B0082;
+  transition: width 0.5s ease;
+}
+
+.link-animado:hover::after {
+  width: 100px; /* ou 50%, se quiser uma linha mais curta */
+}
+
+
+/* Menu interio ( escondido por padrão )*/
+.list-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 0;
+  transition: max-height 0.5s ease;
+  background: #13131F;
+  z-index: 1000; 
+}
+
+.list-menu li a{
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.list-menu li {
+   padding: 10px;
+  border-bottom: 1px soid #ccc;
+}
+
+.list-menu:last-child {
+  border-bottom: none;
+}
+
+.list-menu.aberto {
+  max-height: 250px; /* altura suficiente para mostrar todos os itens + padding */
+  border-bottom: 1px solid #4B0082;
+}
+
+/* FIM */
+

@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.details {
+  margin: 20px;
+}
+
+.project-title {
+  margin-top: 150px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-title h4 {
+  font-size: 36px;
+  color: white;
+}
+
+.project {
+  display: flex;
+  margin-top: 250px;
+  font-size: 30px;
+  gap: 40px;
+}
+
+
+
+.project-title {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+}
+
+.BOX {
+ border-radius: 50px;
+  width: 600px;
+}
+
+.projeto-container {
+  position: relative;
+  width: 450px;
+  z-index: 1;
+}
+
+.img-wrapper {
+    text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+
+
+.IMG {
+  margin-left: 15px;
+  width: 550px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Texto por cima da imagem (inicialmente invisível) */
+.overlay-text {
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 40px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  box-sizing: border-box;
+}
+
+/* Camada de desfoque de fundo */
+.blur-background {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover ativa tudo */
+.img-wrapper:hover {
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.img-wrapper:hover .IMG {
+  transform: translateY(-10px);
+}
+
+.img-wrapper:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Classe ativa o desfoque */
+.img-wrapper:hover ~ .blur-background {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+.mini-language {
+    text-decoration: none;
+    list-style: none;
+    color: rgba(222, 214, 214, 0.533);
+    display: flex;
+    padding-left: 140px;
+    gap: 20px;
+}
+
+
+
+li {
+  margin-top: 20px;
+}
+
+/* relogio*/
+
+.mini-languagem {
+  display: flex;
+  color: rgba(222, 214, 214, 0.533);
+  list-style: none;
+  padding-left: 225px;
+  gap: 20px;
+}
+
+.bird {
+  background-image: url(../assets/);
+  /*border: 10px groove white;
+  border-radius: 50px;
+  width: 600px;
+  height: 670px;*/
+}
+
+.details {
+  margin: 20px; 
+}
+
+
+.img-wrapper {
+   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+/* spotify */
+
+.mini-lenguagem {
+   display: flex;
+  color: rgba(222, 214, 214, 0.533);
+  list-style: none;
+  padding-left: 225px;
+  gap: 20px;
+}
+
+.brd {
+  /*border: 10px groove white; */
+  border-radius: 50px;
+  width: 600px;
+  height: 590px;
+}
+
+
+.bd {
+   /*border: 10px groove white; */
+  border-radius: 50px;
+  width: 600px;
+  height: 590px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px; /* espaço entre os blocos */
+  flex-wrap: wrap; /* para responsividade, para quebrar linha se precisar */
+
+}
+
